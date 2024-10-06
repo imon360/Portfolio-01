@@ -146,27 +146,48 @@ Header Section
 About Section
 ---------------------------------*/
 .about {
-  padding: 2rem 0;
+  padding: 2.5rem 0;
 }
 .about__details {
   display: grid;
-  grid-template-columns: 50% 50%;
-  grid-gap: 1rem;
+  grid-template-columns: auto auto;
+  grid-gap: 1.5rem;
+  align-items: center;
 }
 .about__image .img {
-  background: #7f56fd;
-  padding: 20px;
-  border-radius: 80px 50px 60px 30px;
-  transform: rotate(30deg);
-  width: 200px;
+  width: 250px;
+  margin: auto;
 }
 .about__image img {
-  max-width: 200px;
+  width: 100%;
   border-radius: 80px 70px 70px 50px;
-  transform: rotate(-30deg);
+  border: 5px solid #7f56fd;
 }
 .about__text .text p {
   text-align: justify;
+  letter-spacing: 0.5px;
+}
+.about__text .text p span {
+  font-weight: bold;
+}
+.about__text .button {
+  padding-top: 1rem;
+}
+.about__text .button a {
+  display: inline-block;
+  background: transparent;
+  padding: 10px 15px;
+  border: 2px solid #7f56fd;
+  transition: 0.5s;
+  font-size: 1rem;
+}
+.about__text .button a.cv {
+  margin-right: 20px;
+  margin-bottom: 10px;
+}
+.about__text .button a:hover {
+  background-color: #7f56fd;
+  color: #fff;
 }
 
 /*-------------------------------
@@ -312,6 +333,9 @@ Max Width
     max-width: 160px;
     border-radius: 80px 70px 70px 50px;
     transform: rotate(-30deg);
+  }
+  .about__details {
+    grid-template-columns: auto;
   }
 }
 @media only screen and (max-width: 480px) {

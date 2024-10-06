@@ -162,24 +162,22 @@ Header Section
 About Section
 ---------------------------------*/
 .about {
-  padding: 2rem 0;
+  padding: 2.5rem 0;
   &__details {
     display: grid;
-    grid-template-columns: 50% 50%;
-    grid-gap: 1rem;
+    grid-template-columns: auto auto;
+    grid-gap: 1.5rem;
+    align-items: center;
   }
   &__image {
     .img {
-      background: $primaryColor;
-      padding: 20px;
-      border-radius: 80px 50px 60px 30px;
-      transform: rotate(30deg);
-      width: 200px;
+      width: 250px;
+      margin: auto;
     }
     img {
-      max-width: 200px;
+      width: 100%;
       border-radius: 80px 70px 70px 50px;
-      transform: rotate(-30deg);
+      border: 5px solid $primaryColor;
     }
   }
 
@@ -187,6 +185,29 @@ About Section
     .text {
       p {
         text-align: justify;
+        letter-spacing: 0.5px;
+        span {
+          font-weight: bold;
+        }
+      }
+    }
+    .button {
+      padding-top: 1rem;
+      a {
+        display: inline-block;
+        background: transparent;
+        padding: 10px 15px;
+        border: 2px solid $primaryColor;
+        transition: 0.5s;
+        font-size: 1rem;
+        &.cv {
+          margin-right: 20px;
+          margin-bottom: 10px;
+        }
+        &:hover {
+          background-color: $primaryColor;
+          color: #fff;
+        }
       }
     }
   }
