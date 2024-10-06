@@ -203,6 +203,31 @@ Skill Section
 .skill {
   padding: 2.5rem 0;
 }
+.skill__list {
+  display: grid;
+  grid-template-columns: 3fr 3fr 3fr 3fr;
+  grid-gap: 2.5rem;
+}
+.skill__item {
+  text-align: center;
+  background: #f8f9fa;
+  border-radius: 10px;
+  padding: 20px 10px;
+  transition: 0.5s;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.skill__item:hover {
+  transform: translateY(-10px);
+}
+.skill__item img {
+  width: 50px;
+  border-radius: 100%;
+  margin-bottom: 10px;
+}
+.skill__item p {
+  font-weight: 600;
+  font-size: 1.2rem;
+}
 
 /*-------------------------------
 Portfolio Section
@@ -217,7 +242,7 @@ Portfolio Section
   grid-gap: 2.5rem;
 }
 .portfolio__item {
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
   position: relative;
   overflow: hidden;
@@ -344,6 +369,9 @@ Footer Section
   text-align: center;
   letter-spacing: 1px;
 }
+.footer__text a {
+  font-weight: 600;
+}
 .footer__text a:hover {
   color: #1bb1dc;
 }
@@ -407,6 +435,9 @@ Max Width
   .header__menu .item a {
     padding: 10px 10px;
   }
+  .skill__list {
+    grid-template-columns: 4fr 4fr 4fr;
+  }
   .portfolio__list {
     grid-template-columns: 6fr 6fr;
     grid-gap: 30px;
@@ -446,6 +477,9 @@ Max Width
     grid-template-columns: auto;
     grid-gap: 1.5rem;
   }
+  .skill__list {
+    grid-template-columns: 6fr 6fr;
+  }
   .portfolio__list {
     grid-template-columns: 65%;
     justify-content: center;
@@ -454,6 +488,12 @@ Max Width
   .contact__form .form__group {
     grid-template-columns: auto;
     grid-gap: 0;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .skill__list {
+    grid-template-columns: 80%;
+    justify-content: center;
   }
 }
 @media only screen and (max-width: 480px) {

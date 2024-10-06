@@ -224,6 +224,31 @@ Skill Section
 ---------------------------------*/
 .skill {
   padding: 2.5rem 0;
+  &__list {
+    display: grid;
+    grid-template-columns: 3fr 3fr 3fr 3fr;
+    grid-gap: 2.5rem;
+  }
+  &__item {
+    text-align: center;
+    background: $bgColor;
+    border-radius: 10px;
+    padding: 20px 10px;
+    transition: 0.5s;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    &:hover {
+      transform: translateY(-10px);
+    }
+    img {
+      width: 50px;
+      border-radius: 100%;
+      margin-bottom: 10px;
+    }
+    p {
+      font-weight: 600;
+      font-size: 1.2rem;
+    }
+  }
 }
 /*-------------------------------
 Portfolio Section
@@ -237,7 +262,7 @@ Portfolio Section
     grid-gap: 2.5rem;
   }
   &__item {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
     position: relative;
     overflow: hidden;
@@ -364,6 +389,9 @@ Footer Section
       font-size: 0.9rem;
       text-align: center;
       letter-spacing: 1px;
+    }
+    a {
+      font-weight: 600;
     }
     a:hover {
       color: $secondaryColor;

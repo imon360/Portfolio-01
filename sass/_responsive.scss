@@ -76,6 +76,13 @@ Max Width
     }
   }
 
+  // SKill
+  .skill {
+    &__list {
+      grid-template-columns: 4fr 4fr 4fr;
+    }
+  }
+
   // Portfolio{
   .portfolio {
     &__list {
@@ -127,6 +134,13 @@ Max Width
     }
   }
 
+  // SKill
+  .skill {
+    &__list {
+      grid-template-columns: 6fr 6fr;
+    }
+  }
+
   // Portfolio{
   .portfolio {
     &__list {
@@ -146,7 +160,15 @@ Max Width
     }
   }
 }
-// @media only screen and (max-width: 576px) {}
+@media only screen and (max-width: 576px) {
+  // SKill
+  .skill {
+    &__list {
+      grid-template-columns: 80%;
+      justify-content: center;
+    }
+  }
+}
 @media only screen and (max-width: 480px) {
   .header {
     padding: 1rem 0;
