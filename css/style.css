@@ -196,6 +196,43 @@ Services Section
   padding: 2.5rem 0;
   background: #f8f9fa;
 }
+.services__list {
+  display: grid;
+  grid-template-columns: 4fr 4fr 4fr;
+  grid-gap: 2.5rem;
+}
+.services__item {
+  text-align: center;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: 0.5s;
+  border-radius: 10px;
+  padding: 30px 20px;
+}
+.services__item:hover {
+  transform: translateY(-10px);
+}
+.services__item .icon {
+  width: 55px;
+  height: 55px;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+.services__item .icon i {
+  font-size: 1.8rem;
+}
+.services__item .title {
+  margin: 10px 0;
+  font-size: 1.2rem;
+  color: #7f56fd;
+}
+.services__item .description {
+  color: #413e66;
+  font-size: 1rem;
+}
 
 /*-------------------------------
 Skill Section
@@ -435,6 +472,9 @@ Max Width
   .header__menu .item a {
     padding: 10px 10px;
   }
+  .services__list {
+    grid-template-columns: 6fr 6fr;
+  }
   .skill__list {
     grid-template-columns: 4fr 4fr 4fr;
   }
@@ -476,6 +516,10 @@ Max Width
   .about__details {
     grid-template-columns: auto;
     grid-gap: 1.5rem;
+  }
+  .services__list {
+    grid-template-columns: 80%;
+    justify-content: center;
   }
   .skill__list {
     grid-template-columns: 6fr 6fr;

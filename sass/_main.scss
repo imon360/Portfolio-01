@@ -218,6 +218,43 @@ Services Section
 .services {
   padding: 2.5rem 0;
   background: $bgColor;
+  &__list {
+    display: grid;
+    grid-template-columns: 4fr 4fr 4fr;
+    grid-gap: 2.5rem;
+  }
+  &__item {
+    text-align: center;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: 0.5s;
+    border-radius: 10px;
+    padding: 30px 20px;
+    &:hover {
+      transform: translateY(-10px);
+    }
+    .icon {
+      width: 55px;
+      height: 55px;
+      border-radius: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: auto;
+      i {
+        font-size: 1.8rem;
+      }
+    }
+    .title {
+      margin: 10px 0;
+      font-size: 1.2rem;
+      color: $primaryColor;
+    }
+    .description {
+      color: $blackColor;
+      font-size: 1rem;
+    }
+  }
 }
 /*-------------------------------
 Skill Section

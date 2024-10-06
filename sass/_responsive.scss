@@ -76,6 +76,12 @@ Max Width
     }
   }
 
+  .services {
+    &__list {
+      grid-template-columns: 6fr 6fr;
+    }
+  }
+
   // SKill
   .skill {
     &__list {
@@ -131,6 +137,14 @@ Max Width
     &__details {
       grid-template-columns: auto;
       grid-gap: 1.5rem;
+    }
+  }
+
+  // Services
+  .services {
+    &__list {
+      grid-template-columns: 80%;
+      justify-content: center;
     }
   }
 
