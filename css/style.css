@@ -163,7 +163,7 @@ About Section
 }
 .about__text .text p {
   text-align: justify;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.1px;
 }
 .about__text .text p span {
   font-weight: bold;
