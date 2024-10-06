@@ -211,6 +211,52 @@ Portfolio Section
   padding: 2.5rem 0;
   background: #f8f9fa;
 }
+.portfolio__list {
+  display: grid;
+  grid-template-columns: 4fr 4fr 4fr;
+  grid-gap: 2.5rem;
+}
+.portfolio__item {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+}
+.portfolio__item img {
+  width: 100%;
+  transition: 0.5s;
+}
+.portfolio__item:hover img {
+  transform: scale(1.2);
+}
+.portfolio__item:hover .portfolio__view {
+  display: flex;
+  transform: scale(1);
+}
+.portfolio__view {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  margin: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  transform: scale(0);
+  transition: 0.5s;
+  background: rgba(0, 0, 0, 0.3);
+}
+.portfolio__view p {
+  font-size: 0.8rem;
+  text-align: center;
+  padding: 10px;
+  color: #fff;
+  background: #7f56fd;
+}
+.portfolio__view p:hover {
+  background: #6d41f1;
+}
 
 /*-------------------------------
 Contact Section
@@ -228,7 +274,7 @@ Contact Section
 }
 .contact__form input,
 .contact__form textarea {
-  padding: 10px;
+  padding: 12px;
   display: block;
   width: 100%;
   border: 1px solid #bec5d4;
@@ -361,6 +407,10 @@ Max Width
   .header__menu .item a {
     padding: 10px 10px;
   }
+  .portfolio__list {
+    grid-template-columns: 6fr 6fr;
+    grid-gap: 30px;
+  }
 }
 @media only screen and (max-width: 767px) {
   .header__social {
@@ -395,6 +445,11 @@ Max Width
   .about__details {
     grid-template-columns: auto;
     grid-gap: 1.5rem;
+  }
+  .portfolio__list {
+    grid-template-columns: 65%;
+    justify-content: center;
+    grid-gap: 30px;
   }
   .contact__form .form__group {
     grid-template-columns: auto;
