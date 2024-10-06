@@ -5,6 +5,7 @@ $primaryHoverColor: #6d41f1;
 $secondaryColor: #1bb1dc;
 $secondaryHoverCOlor: #0a98c0;
 $blackColor: #413e66;
+$bgColor: #f8f9fa;
 
 *,
 *::before,
@@ -53,8 +54,6 @@ $gutter-y: 0;
       margin: auto;
       img {
         width: 100%;
-        filter: drop-shadow(0px 1000px 0 $primaryColor);
-        transform: translateY(-1000px);
       }
     }
   }
@@ -166,7 +165,7 @@ About Section
   &__details {
     display: grid;
     grid-template-columns: auto auto;
-    grid-gap: 1.5rem;
+    grid-gap: 3rem;
     align-items: center;
   }
   &__image {
@@ -200,6 +199,7 @@ About Section
         border: 2px solid $primaryColor;
         transition: 0.5s;
         font-size: 1rem;
+        color: $primaryColor;
         &.cv {
           margin-right: 20px;
           margin-bottom: 10px;
@@ -213,8 +213,64 @@ About Section
   }
 }
 /*-------------------------------
-Section
+Services Section
 ---------------------------------*/
+.services {
+  padding: 2.5rem 0;
+  background: $bgColor;
+}
+/*-------------------------------
+Skill Section
+---------------------------------*/
+.skill {
+  padding: 2.5rem 0;
+}
+/*-------------------------------
+Portfolio Section
+---------------------------------*/
+.portfolio {
+  padding: 2.5rem 0;
+  background: $bgColor;
+}
+/*-------------------------------
+Contact Section
+---------------------------------*/
+.contact {
+  padding: 2.5rem 0;
+  &__form {
+    .form__group {
+      display: grid;
+      grid-template-columns: auto auto;
+      grid-gap: 10px;
+    }
+    input {
+      margin-bottom: 10px;
+    }
+    input,
+    textarea {
+      padding: 10px;
+      display: block;
+      width: 100%;
+      border: 1px solid #bec5d4;
+      font-size: 14px;
+      &:focus {
+        outline: 0;
+        border: 1px solid #a2aabb;
+      }
+    }
+    .submit {
+      margin-bottom: 0;
+      margin-top: 10px;
+      background-color: $primaryColor;
+      color: #fff;
+      border: 0;
+      &:hover {
+        background-color: $primaryHoverColor;
+        border: 0;
+      }
+    }
+  }
+}
 
 /*-------------------------------
 Footer Section
